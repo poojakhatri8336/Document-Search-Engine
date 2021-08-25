@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    a:visited
+    {
+        color: darkmagenta;
+    }
+    img {
+  border: 2px black;
+  border-radius: 8px;
+
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#0a603c;background-image: none;"  >
+  <a class="navbar-brand" href="http://127.0.0.1:5000/travel"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:5000/" >Home</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/world">World</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/travel">Travel <span class="sr-only">(current)</span></a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/politics">Politics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/sports">Sports</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+
+<div class="container">
+{% for i in result: %}
+<br>
+ <div class="search-result">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                        <a href="{{i['url']}}">
+                            {% if 'thumbnail' in i: %}
+                                <img class="img-responsive" src="{{i['thumbnail']}}" alt="" width="300" height="200">
+                            {% else: %}
+                                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/CNN_International_logo.svg/1200px-CNN_International_logo.svg.png" alt="" width="300" height="200">
+                            {% endif %}
+                        </a>
+
+                        </div>
+                        <div class="col-xs-6 col-sm-9 col-md-9 col-lg-10">
+                             <a href="{{i['url']}}">
+                            <h5 style="margin-left: 150px">{{ i['headline']}}</h5>
+                                 </a>
+                           <details>
+                               <summary style="margin-left: 150px">For Quick reference of article </summary>
+                                 <p style="margin-left: 150px">{{i['body']}}</p>
+                             </details>
+                        </div>
+
+                </div>
+            </div>
+    <br>
+{% endfor %}
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
