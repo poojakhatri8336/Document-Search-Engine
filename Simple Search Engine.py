@@ -12,7 +12,7 @@ import warnings
 import nltk
 #nltk.download('wordnet')
 from nltk.stem.wordnet import WordNetLemmatizer
-from nltk.corpus import wordnet as wn
+from nltk.corpus import wordnet as wn 
 import string
 import re
 import json
