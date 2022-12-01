@@ -9,7 +9,7 @@ url = 'https://search.api.cnn.io/content?q=coronavirus&size=10&from=20&page=3'
 json_data = requests.get(url).json()
 data = json_data['result']
 for i in range(0,10):                       #bcoz one page has 10 records
-    print((data[i]['url']))
+    print((data[i]['url'])) 
     '''
 try:
     conn = MongoClient("mongodb://localhost:27017/")
