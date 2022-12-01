@@ -9,7 +9,7 @@ So, to save that time import the collections from cnndata folder into mongodb da
 Cnn folder can be downloaded from the below link.
 
 https://drive.google.com/file/d/1Prcc3ktlUdJjm_molXU6lsW3O5qIQpqj/view?usp=sharing
-
+ 
 
   
 
