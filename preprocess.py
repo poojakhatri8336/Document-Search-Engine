@@ -8,7 +8,7 @@ import csv
 
 
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb://localhost:27017/") 
 
 # Database Name
 db = client["CNNProxy"]
